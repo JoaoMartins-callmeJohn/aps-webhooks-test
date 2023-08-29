@@ -1,0 +1,83 @@
+﻿body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: ArtifaktElement;
+}
+
+#header, #sidebar, #log {
+  position: absolute;
+}
+
+#header {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#log {
+  width: 90%;
+  right: 5%;
+  top: 3em;
+  bottom: 0;
+  overflow: auto;
+}
+
+#header > * {
+  height: 2em;
+  margin: 0 0.5em;
+}
+
+#login {
+  font-family: ArtifaktElement;
+  font-size: 1em;
+}
+
+#header .title {
+  height: auto;
+  margin-right: auto;
+}
+
+
+#aps-logo {
+  height: 1em;
+}
+
+.ready {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  display: none;
+  width: 10vw;
+}
+
+.failure {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  display: none;
+  width: 10vw;
+}
+
+.gathering {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  display: none;
+  width: 10vw;
+}
+
+.swal2-input {
+  display: block;
+}
+
+.log-details {
+  padding: 10px;
+}
+
+p.json {
+  white-space: pre;
+}

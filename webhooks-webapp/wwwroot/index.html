@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <link rel="stylesheet" href="/main.css">
+  <title>Autodesk Platform Services: Webhooks Test App (EMEA)</title>
+</head>
+
+<body>
+  <div id="header">
+    <img id="aps-logo" class="logo" src="https://cdn.autodesk.io/logo/black/stacked.png " alt="Autodesk Platform Services">
+    <span class="title">Webhooks Test App (EMEA)</span>
+    <button id="posthook" >Create Webhook (EMEA)</button>
+  </div>
+  <div id="log"></div>
+  <div id="alert_boxes">
+    <div class="alert-box gathering">Gathering Data!</div>
+    <div class="alert-box ready">Success!</div>
+    <div class="alert-box failure">Fail!</div>
+  </div>
+  <!-- Sweetalert2 to handle notifications -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--signalr-->
+  <script src="js/signalr/dist/browser/signalr.min.js"></script>
+  <script src="/Hub/HooksHub.js"></script>
+  <script src="/main.js" type="module"></script>
+  <datalist id="querypropertiesList">
+    <option value="extraction.finished">Extraction Finished</option>
+    <option value="extraction.updated">Extraction Updated</option>
+  </datalist>
+</body>
+
+</html>
