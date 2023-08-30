@@ -6,6 +6,8 @@ using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
+using System.Text.Json.Nodes;
+using System.Text;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -36,6 +38,7 @@ public class HooksController : ControllerBase
     public async Task<WebhookResponse> CreateWebhook([FromBody] WebhookParams hookParams)
     {
         WebhookResponse apsresponse = new WebhookResponse();
+
         try
         {
             var clientHandler = new HttpClientHandler

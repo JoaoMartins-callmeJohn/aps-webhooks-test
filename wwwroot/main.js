@@ -52,7 +52,7 @@ async function postWebhook(event, workflow, token, connectionId) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ "Callback": window.location.href +"/api/hooks/notification","ConnectionId":connectionId,"HookEvent":event,"Workflow":workflow,"Token":token})
+    body: JSON.stringify({ "Callback": window.location.href +"api/hooks/notification","ConnectionId":connectionId,"HookEvent":event,"Workflow":workflow,"Token":token})
   };
 
   let resp = await fetch(`/api/hooks/createhook`, options);
